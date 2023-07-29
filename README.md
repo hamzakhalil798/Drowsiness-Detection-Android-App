@@ -8,7 +8,7 @@
 
 <head>
   <style>
-    img {
+    #img {
       max-width: 100px;
       display: block;
       margin: 0 auto;
