@@ -25,7 +25,12 @@ Stay awake and stay safe on the road and in various contexts where attentiveness
 <img src="https://github.com/hamzakhalil798/Drowsiness-Detection-Android-App/blob/main/images/result_1.jpeg" alt="App Screenshot 1" width="300">
 <img src="https://github.com/hamzakhalil798/Drowsiness-Detection-Android-App/blob/main/images/result_2.jpeg" alt="App Screenshot 2" width="300">
 
+## Notification Feature:
+
+Additionally, the app includes a notification feature that triggers whenever the app detects that your eyes are closed for more than 3 seconds. This notification serves as an important safety measure, especially during activities like driving or working for long hours.
+
 Get ready to experience a heightened level of safety and prevent fatigue-related accidents with my Drowsiness Detection Android App. Download now and let technology take care of your safety while you concentrate on the task at hand.
 
 Stay alert, stay safe!
+
 
