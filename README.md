@@ -8,7 +8,7 @@
 
 <head>
   <style>
-    #img {
+    .imgg {
       max-width: 100px;
       display: block;
       margin: 0 auto;
@@ -39,8 +39,8 @@
 
   <h2>App Screenshots:</h2>
 
-  <img src="https://github.com/hamzakhalil798/Drowsiness-Detection-Android-App/blob/main/images/result_1.jpeg" alt="App Screenshot 1">
-  <img src="https://github.com/hamzakhalil798/Drowsiness-Detection-Android-App/blob/main/images/result_2.jpeg" alt="App Screenshot 2">
+  <img class"imgg" src="https://github.com/hamzakhalil798/Drowsiness-Detection-Android-App/blob/main/images/result_1.jpeg" alt="App Screenshot 1">
+  <img class "imgg" src="https://github.com/hamzakhalil798/Drowsiness-Detection-Android-App/blob/main/images/result_2.jpeg" alt="App Screenshot 2">
 
   <p style="text-align: center;">Get ready to experience a heightened level of safety and prevent fatigue-related accidents with our Drowsiness Detection Android App. Download now and let technology take care of your safety while you concentrate on the task at hand.</p>
 
