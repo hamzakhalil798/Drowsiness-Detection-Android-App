@@ -46,6 +46,13 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
+import androidx.core.app.NotificationCompat
+
+
 class CameraFragment : Fragment(), FaceLandmarkerHelper.LandmarkerListener {
 
 
@@ -188,6 +195,47 @@ class CameraFragment : Fragment(), FaceLandmarkerHelper.LandmarkerListener {
         )
     }
 
+
+    private fun showSleepNotification() {
+        val channelId = "sleep_notification_channel"
+        val notificationId = 1
+
+        val notificationManager =
+            requireContext().getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        // Create the notification channel (required for Android 8.0 and above)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel(
+                channelId,
+                "Sleep Detection Notification",
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
+            notificationManager.createNotificationChannel(channel)
+        }
+
+        val notification = NotificationCompat.Builder(requireContext(), channelId)
+            .setContentTitle("Sleep Alert")
+            .setContentText("You seem to be falling asleep! Please take a break.")
+            .setSmallIcon(android.R.drawable.ic_dialog_alert) // Use a system-provided icon
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .build()
+
+        // Show the notification
+        notificationManager.notify(notificationId, notification)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Declare and bind preview, capture and analysis use cases
     @SuppressLint("UnsafeOptInUsageError")
     private fun bindCameraUseCases() {
@@ -294,6 +342,9 @@ class CameraFragment : Fragment(), FaceLandmarkerHelper.LandmarkerListener {
                 }
 
                 fragmentCameraBinding.statusTextView.text = status
+                if (status == "sleep") {
+                    showSleepNotification()
+                }
 
             }
         }
