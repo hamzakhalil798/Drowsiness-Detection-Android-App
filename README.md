@@ -9,7 +9,7 @@
 <head>
   <style>
     img {
-      max-width: 300px;
+      max-width: 100px;
       display: block;
       margin: 0 auto;
     }
